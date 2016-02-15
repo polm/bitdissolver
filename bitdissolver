@@ -1,0 +1,5 @@
+#!/bin/bash
+# based on cellusion's photoshop method
+./make-gradient.sh
+convert "$1" -resize 256x1000  -colorspace Gray -auto-level \
+    gradient.png -clut -scale 1000x1000 -posterize 6 "$1".out.png
